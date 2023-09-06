@@ -8,19 +8,11 @@
 import SwiftUI
 
 struct CV: View {
-    private let skills = [
-        Skill(name: "Swift", level: 4),
-        Skill(name: "SwiftUI", level: 4),
-        Skill(name: "UIKit", level: 3),
-        Skill(name: "C#", level: 5),
-        Skill(name: "Git", level: 5),
-    ]
-    
     var body: some View {
         RelativeHStack {
             VStack(alignment: .leading) {
                 VStack(alignment: .leading) {
-                    Text("RADU PETRISEL")
+                    Text(name)
                         .font(.title.bold())
                     Text("Software Engineer")
                 }
@@ -28,24 +20,23 @@ struct CV: View {
                 Section(title: "Details") {
                     VStack {
                         Text("Address")
-                        Text("3, Aleea Azuga Cluj-Napoca, 400451 Romania")
+                        Text(address)
                     }
                     
                     VStack {
                         Text("Phone")
-                        Text("+40747673818")
+                        Text(phone)
                     }
                     
                     VStack {
                         Text("Email")
-                        Text("radupetrisel@icloud.com")
+                        Text(email)
                     }
                 }
                 
                 Section(title: "Links") {
-                    Text("[LinkedIn](https://www.linkedin.com/in/radu-petrisel-476668173/)")
-                    
-                    Text("[GitLab](https://gitlab.com/radupetrisel)")
+                    Text(linkedIn)
+                    Text(github)
                 }
                 
                 Section(title: "Skills") {
@@ -69,7 +60,7 @@ struct CV: View {
                 }
                 
                 Section(title: "Hobbies") {
-                    Text("Gaming Travelling Swimming")
+                    Text(hobbies.formatted(.list(type: .and)))
                 }
             }
             .frame(height: pdfPageHeight)
@@ -77,55 +68,47 @@ struct CV: View {
             
             VStack(spacing: 30) {
                 Section(title: "Profile") {
-                    Text("Passionate software engineer always looking to improve myself. I'm always trying to keep up with latest software and technologies and enjoy taking heads-on the challenges that come with them.")
+                    Text(profile)
                 }
                 
                 Section(title: "EMPLOYMENT HISTORY") {
                     HStack {
-                        Text(".NET Developer, Broadridge Financial Solutions")
+                        Text(job)
                         
                         Spacer()
                         
-                        Text("Cluj-Napoca")
+                        Text(location)
                     }
                     
-                    Text("""
-• Implemented various client-side features on high-touch and low-touch trading systems
-• Helped implement server-side features on high-touch trading systems
-• Contributed to open-source projects
-""")
+                    Text(jobDescription)
                 }
                 
                 Section(title: "INTERNSHIPS") {
                     HStack {
-                        Text("DevOps Intern, Broadridge Financial Solutions")
+                        Text(internship)
                         
                         Spacer()
                         
-                        Text("Cluj-Napoca")
+                        Text(location)
                     }
                     
-                    Text("""
-• Maintained CI/CD pipelines
-• Enhanced developer experience on internal platforms (Git, Jenkins)
-""")
-                    
+                    Text(internshipDescription)
                 }
                 
                 Section(title: "EDUCATION") {
                     HStack {
-                        Text("Bachelor, Technical University of Cluj-Napoca")
+                        Text(education)
                         
                         Spacer()
                         
-                        Text("Cluj-Napoca")
+                        Text(location)
                     }
                 }
                 
                 Section(title: "CERTIFICATIONS") {
-                    Text("Cambridge English Level 3 Certificate in ESOL International (Advanced), Cambridge English Language Assessment")
+                    Text(certificate)
                     
-                    Text("Grade C")
+                    Text(certificateMark)
                 }
             }
             .padding(.leading, 5)
@@ -134,11 +117,6 @@ struct CV: View {
         }
         .padding()
         .pdfPage()
-    }
-    
-    struct Skill {
-        let name: String
-        let level: Int
     }
 }
 

@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C15FB422A9E2D25001E2C21 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15FB412A9E2D25001E2C21 /* View+Extensions.swift */; };
+		7C15FB442A9E2FA7001E2C21 /* SkillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15FB432A9E2FA7001E2C21 /* SkillView.swift */; };
+		7C15FB462A9E3388001E2C21 /* SkillAlignmentGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C15FB452A9E3388001E2C21 /* SkillAlignmentGuide.swift */; };
 		7C79F7972A964E850069F722 /* Radu_Petrisel_iOS_DeveloperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C79F7962A964E850069F722 /* Radu_Petrisel_iOS_DeveloperApp.swift */; };
 		7C79F7992A964E850069F722 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C79F7982A964E850069F722 /* ContentView.swift */; };
 		7C79F79B2A964E870069F722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C79F79A2A964E870069F722 /* Assets.xcassets */; };
 		7C79F79E2A964E870069F722 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C79F79D2A964E870069F722 /* Preview Assets.xcassets */; };
+		7C79F7A62A9651530069F722 /* CV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C79F7A52A9651530069F722 /* CV.swift */; };
+		7C79F7A82A9655140069F722 /* RelativeHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C79F7A72A9655140069F722 /* RelativeHStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C15FB412A9E2D25001E2C21 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		7C15FB432A9E2FA7001E2C21 /* SkillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillView.swift; sourceTree = "<group>"; };
+		7C15FB452A9E3388001E2C21 /* SkillAlignmentGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillAlignmentGuide.swift; sourceTree = "<group>"; };
 		7C79F7932A964E850069F722 /* Radu Petrisel iOS Developer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Radu Petrisel iOS Developer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C79F7962A964E850069F722 /* Radu_Petrisel_iOS_DeveloperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Radu_Petrisel_iOS_DeveloperApp.swift; sourceTree = "<group>"; };
 		7C79F7982A964E850069F722 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7C79F79A2A964E870069F722 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C79F79D2A964E870069F722 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7C79F79F2A964E870069F722 /* Radu_Petrisel_iOS_Developer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Radu_Petrisel_iOS_Developer.entitlements; sourceTree = "<group>"; };
+		7C79F7A52A9651530069F722 /* CV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CV.swift; sourceTree = "<group>"; };
+		7C79F7A72A9655140069F722 /* RelativeHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeHStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,11 @@
 			children = (
 				7C79F7962A964E850069F722 /* Radu_Petrisel_iOS_DeveloperApp.swift */,
 				7C79F7982A964E850069F722 /* ContentView.swift */,
+				7C79F7A52A9651530069F722 /* CV.swift */,
+				7C15FB452A9E3388001E2C21 /* SkillAlignmentGuide.swift */,
+				7C15FB432A9E2FA7001E2C21 /* SkillView.swift */,
+				7C15FB412A9E2D25001E2C21 /* View+Extensions.swift */,
+				7C79F7A72A9655140069F722 /* RelativeHStack.swift */,
 				7C79F79A2A964E870069F722 /* Assets.xcassets */,
 				7C79F79F2A964E870069F722 /* Radu_Petrisel_iOS_Developer.entitlements */,
 				7C79F79C2A964E870069F722 /* Preview Content */,
@@ -139,8 +154,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C15FB442A9E2FA7001E2C21 /* SkillView.swift in Sources */,
 				7C79F7992A964E850069F722 /* ContentView.swift in Sources */,
+				7C79F7A82A9655140069F722 /* RelativeHStack.swift in Sources */,
+				7C15FB462A9E3388001E2C21 /* SkillAlignmentGuide.swift in Sources */,
 				7C79F7972A964E850069F722 /* Radu_Petrisel_iOS_DeveloperApp.swift in Sources */,
+				7C15FB422A9E2D25001E2C21 /* View+Extensions.swift in Sources */,
+				7C79F7A62A9651530069F722 /* CV.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

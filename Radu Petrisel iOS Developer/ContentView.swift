@@ -9,13 +9,37 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            CV()
+                .toolbar {
+                    ShareLink("Export PDF", item: render())
+                        .toolbar(.visible, for: .windowToolbar)
+                }
+                .preferredColorScheme(.light)
         }
-        .padding()
+        .pdfPage()
+    }
+    
+    @MainActor
+    func render() -> URL {
+        let renderer = ImageRenderer(content: CV())
+        
+        let url = URL.documentsDirectory.appending(component: "Radu Petrisel - iOS Developer.pdf")
+        
+        renderer.render { size, contextAction in
+            var box = CGRect(x: 0, y: 0, width: pdfPageWidth, height: pdfPageHeight)
+            
+            guard let pdf = CGContext(url as CFURL, mediaBox: &box, nil) else { return }
+            
+            pdf.beginPDFPage(nil)
+            
+            contextAction(pdf)
+            
+            pdf.endPDFPage()
+            pdf.closePDF()
+        }
+        
+        return url
     }
 }
 

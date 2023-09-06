@@ -16,6 +16,7 @@
 		7C79F79E2A964E870069F722 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C79F79D2A964E870069F722 /* Preview Assets.xcassets */; };
 		7C79F7A62A9651530069F722 /* CV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C79F7A52A9651530069F722 /* CV.swift */; };
 		7C79F7A82A9655140069F722 /* RelativeHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C79F7A72A9655140069F722 /* RelativeHStack.swift */; };
+		7CE958522AA873B30077CD1F /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE958512AA873B30077CD1F /* Section.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		7C79F79F2A964E870069F722 /* Radu_Petrisel_iOS_Developer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Radu_Petrisel_iOS_Developer.entitlements; sourceTree = "<group>"; };
 		7C79F7A52A9651530069F722 /* CV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CV.swift; sourceTree = "<group>"; };
 		7C79F7A72A9655140069F722 /* RelativeHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativeHStack.swift; sourceTree = "<group>"; };
+		7CE958512AA873B30077CD1F /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				7C79F7962A964E850069F722 /* Radu_Petrisel_iOS_DeveloperApp.swift */,
 				7C79F7982A964E850069F722 /* ContentView.swift */,
 				7C79F7A52A9651530069F722 /* CV.swift */,
+				7CE958512AA873B30077CD1F /* Section.swift */,
 				7C15FB452A9E3388001E2C21 /* SkillAlignmentGuide.swift */,
 				7C15FB432A9E2FA7001E2C21 /* SkillView.swift */,
 				7C15FB412A9E2D25001E2C21 /* View+Extensions.swift */,
@@ -159,6 +162,7 @@
 				7C79F7A82A9655140069F722 /* RelativeHStack.swift in Sources */,
 				7C15FB462A9E3388001E2C21 /* SkillAlignmentGuide.swift in Sources */,
 				7C79F7972A964E850069F722 /* Radu_Petrisel_iOS_DeveloperApp.swift in Sources */,
+				7CE958522AA873B30077CD1F /* Section.swift in Sources */,
 				7C15FB422A9E2D25001E2C21 /* View+Extensions.swift in Sources */,
 				7C79F7A62A9651530069F722 /* CV.swift in Sources */,
 			);

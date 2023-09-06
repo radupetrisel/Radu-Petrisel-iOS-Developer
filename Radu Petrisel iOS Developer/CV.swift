@@ -19,16 +19,13 @@ struct CV: View {
     var body: some View {
         RelativeHStack {
             VStack(alignment: .leading) {
-                VStack {
-                    Text("Radu Petrisel".uppercased())
-                        .font(.largeTitle)
+                VStack(alignment: .leading) {
+                    Text("RADU PETRISEL")
+                        .font(.title.bold())
                     Text("Software Engineer")
                 }
-                .padding()
                 
-                VStack {
-                    Text("Details")
-                    
+                Section(title: "Details") {
                     VStack {
                         Text("Address")
                         Text("3, Aleea Azuga Cluj-Napoca, 400451 Romania")
@@ -45,57 +42,46 @@ struct CV: View {
                     }
                 }
                 
-                VStack(alignment: .leading) {
-                    Text("Links")
-                    
+                Section(title: "Links") {
                     Text("[LinkedIn](https://www.linkedin.com/in/radu-petrisel-476668173/)")
                     
                     Text("[GitLab](https://gitlab.com/radupetrisel)")
                 }
                 
-                VStack(alignment: .skillAlignmentGuide, spacing: 3) {
-                    Text("Skills")
-                    
-                    ForEach(skills, id: \.name) { skill in
+                Section(title: "Skills") {
+                    VStack(alignment: .skillAlignmentGuide) {
+                        ForEach(skills, id: \.name) { skill in
+                            HStack {
+                                SkillView(skill: skill.name, level: skill.level)
+                            }
+                        }
+                        
+                        Text("Languages")
+                        
                         HStack {
-                            SkillView(skill: skill.name, level: skill.level)
+                            SkillView(skill: "Romanian", level: 5)
+                        }
+                        
+                        HStack {
+                            SkillView(skill: "English", level: 5)
                         }
                     }
-                    
-                    Text("Languages")
-                    
-                    HStack {
-                        SkillView(skill: "Romanian", level: 5)
-                    }
-                    
-                    HStack {
-                        SkillView(skill: "English", level: 5)
-                    }
-                    
                 }
                 
-                VStack {
-                    Text("Hobbies")
-                    
+                Section(title: "Hobbies") {
                     Text("Gaming Travelling Swimming")
                 }
             }
+            .padding()
             .frame(height: pdfPageHeight)
             .layoutPriority(2)
             
             VStack(spacing: 30) {
-                Spacer()
-                
-                VStack {
-                    Text("Profile")
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                    
+                Section(title: "Profile") {
                     Text("Passionate software engineer always looking to improve myself. I'm always trying to keep up with latest software and technologies and enjoy taking heads-on the challenges that come with them.")
                 }
                 
-                VStack {
-                    Text("EMPLOYMENT HISTORY")
-                    
+                Section(title: "EMPLOYMENT HISTORY") {
                     HStack {
                         Text(".NET Developer, Broadridge Financial Solutions")
                         
@@ -111,9 +97,7 @@ struct CV: View {
 """)
                 }
                 
-                VStack {
-                    Text("INTERNSHIPS")
-                    
+                Section(title: "INTERNSHIPS") {
                     HStack {
                         Text("DevOps Intern, Broadridge Financial Solutions")
                         
@@ -129,9 +113,7 @@ struct CV: View {
                     
                 }
                 
-                VStack {
-                    Text("EDUCATION")
-                    
+                Section(title: "EDUCATION") {
                     HStack {
                         Text("Bachelor, Technical University of Cluj-Napoca")
                         
@@ -141,21 +123,16 @@ struct CV: View {
                     }
                 }
                 
-                VStack {
-                    Text("CERTIFICATIONS")
-                    
-                    
+                Section(title: "CERTIFICATIONS") {
                     Text("Cambridge English Level 3 Certificate in ESOL International (Advanced), Cambridge English Language Assessment")
                     
                     Text("Grade C")
                 }
-                
-                Spacer()
             }
+            .padding()
             .frame(height: pdfPageHeight)
-            .layoutPriority(3)
+            .layoutPriority(6)
         }
-        .padding()
         .pdfPage()
     }
     

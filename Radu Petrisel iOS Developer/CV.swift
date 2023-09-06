@@ -72,9 +72,8 @@ struct CV: View {
                     Text("Gaming Travelling Swimming")
                 }
             }
-            .padding()
             .frame(height: pdfPageHeight)
-            .layoutPriority(2)
+            .layoutPriority(27)
             
             VStack(spacing: 30) {
                 Section(title: "Profile") {
@@ -129,10 +128,11 @@ struct CV: View {
                     Text("Grade C")
                 }
             }
-            .padding()
+            .padding(.leading, 5)
             .frame(height: pdfPageHeight)
-            .layoutPriority(6)
+            .layoutPriority(73)
         }
+        .padding()
         .pdfPage()
     }
     

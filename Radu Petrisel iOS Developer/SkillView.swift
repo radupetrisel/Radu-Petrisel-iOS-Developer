@@ -18,13 +18,8 @@ struct SkillView: View {
             
             HStack(spacing: 2) {
                 ForEach(1..<6, id: \.self) { index in
-                    if index <= level {
-                        Image(systemName: "circle.fill")
-                            .font(.caption)
-                    } else {
-                        Image(systemName: "circle")
-                            .font(.caption)
-                    }
+                    Image(systemName: index <= level ? "circle.fill" : "circle")
+                        .font(.system(size: 9))
                 }
             }
             .alignmentGuide(.skillAlignmentGuide) { viewDimensions in

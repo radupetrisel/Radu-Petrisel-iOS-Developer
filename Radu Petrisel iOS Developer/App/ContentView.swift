@@ -3,20 +3,19 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            CV_Old()
+            CurriculumVitae()
                 .toolbar {
                     ShareLink("Export PDF", item: render())
                         .toolbar(.visible, for: .windowToolbar)
                 }
                 .preferredColorScheme(.light)
         }
-        .pdfPage()
     }
     
     @MainActor
     func render() -> URL {
-        let renderer = ImageRenderer(content: CV_Old())
-        
+        let renderer = ImageRenderer(content: CurriculumVitae())
+
         let url = URL.documentsDirectory.appending(component: "Radu Petrisel - iOS Developer.pdf")
         
         renderer.render { size, contextAction in

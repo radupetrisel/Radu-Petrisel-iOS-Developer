@@ -24,8 +24,8 @@ struct CV_Old: View {
                 }
                 
                 Section(title: "Links") {
-                    Text(linkedIn)
-                    Text(github)
+                    Text("linkedIn")
+                    Text("github")
                 }
                 
                 VStack() {

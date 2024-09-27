@@ -1,9 +1,11 @@
 import SwiftUI
 
 struct ProfileImage: View {
+    private let socialsIconSize: Double = 14
+
     var body: some View {
         HStack {
-            Image("photo")
+            Image(.profile)
                 .resizable()
                 .scaledToFit()
                 .offset(y: 7)
@@ -12,7 +14,9 @@ struct ProfileImage: View {
 
             VStack(alignment: .leading) {
                 Text(name)
-                    .font(.system(size: 20).bold())
+                    .font(.system(size: 20))
+                    .fontWeight(.bold)
+                    .offset(x: -1)
 
                 Text(jobTitle)
                     .foregroundStyle(.secondary)

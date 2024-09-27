@@ -8,27 +8,54 @@
 import SwiftUI
 
 struct CurriculumVitae: View {
-    private let leftToRightRatio = 0.35
+    private let leftToRightRatio = 0.33
     private var rightToLeftRatio: Double { 1 - leftToRightRatio }
 
     var body: some View {
-        HStack(alignment: .top) {
-            VStack(alignment: .leading) {
-                ProfileImage()
+        GeometryReader { proxy in
+            HStack(alignment: .top) {
+                VStack(alignment: .leading, spacing: 0) {
+                    ProfileImage()
 
-                ContactDetails()
+                    VStack(alignment: .leading, spacing: 20) {
+                        ContactDetails()
+
+                        Section(title: "Skills") {
+                            ForEach(skills, id: \.name) { skill in
+                                HStack {
+                                    SkillView(skill: skill.name, level: skill.level)
+                                }
+                            }
+                        }
+
+                        Section(title: "Languages") {
+                            HStack {
+                                SkillView(skill: "Romanian", level: 5)
+                            }
+
+                            HStack {
+                                SkillView(skill: "English", level: 5)
+                            }
+                        }
+
+                        Section(title: "Hobbies") {
+                            Text(hobbies.formatted(.list(type: .and)))
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                    }
+                }
+                .frame(width: proxy.size.width * leftToRightRatio)
+
+                Divider()
+
+                Text("Right side")
+                    .frame(width: proxy.size.width * rightToLeftRatio)
             }
-            .frame(width: pdfPageWidth * leftToRightRatio)
-
-            Divider()
-
-            Text("Right side")
-                .frame(width: pdfPageWidth * rightToLeftRatio)
         }
-        .pdfPage()
-        .padding()
-        .preferredColorScheme(.light)
         .overlay(alignment: .bottomTrailing, content: SwiftUIWatermark.init)
+        .padding()
+        .pdfPage()
+        .preferredColorScheme(.light)
     }
 }
 

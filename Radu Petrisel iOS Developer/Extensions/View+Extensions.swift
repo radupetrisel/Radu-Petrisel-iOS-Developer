@@ -5,7 +5,6 @@ extension View {
     var pdfPageWidth: Double { 582 }
     
     func pdfPage() -> some View {
-        frame(maxWidth: .infinity, maxHeight: .infinity)
-            .frame(width: pdfPageWidth, height: pdfPageHeight)
+        frame(width: pdfPageWidth, height: pdfPageHeight)
     }
 }

@@ -10,8 +10,8 @@ Romania
 let phone = "+40747673818"
 let email = "radupetrisel@icloud.com"
 
-let linkedIn = "[LinkedIn](https://www.linkedin.com/in/radu-petrisel-476668173/)"
-let github = "[Github](https://github.com/radupetrisel)"
+let linkedIn = "https://www.linkedin.com/in/radu-petrisel"
+let github = "https://github.com/radupetrisel"
 
 let skills = [
     Skill(name: "Swift", level: 4),

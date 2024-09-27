@@ -1,21 +1,10 @@
-//
-//  CV.swift
-//  Radu Petrisel iOS Developer
-//
-//  Created by Radu Petrisel on 23.08.2023.
-//
-
 import SwiftUI
 
-struct CV: View {
+struct CV_Old: View {
     var body: some View {
-        RelativeHStack {
+        HStack {
             VStack(alignment: .leading) {
-                VStack(alignment: .leading) {
-                    Text(name)
-                        .font(.title.bold())
-                    Text("Software Engineer")
-                }
+                ProfileImage()
                 
                 Section(title: "Details") {
                     VStack {
@@ -39,16 +28,16 @@ struct CV: View {
                     Text(github)
                 }
                 
-                Section(title: "Skills") {
-                    VStack(alignment: .skillAlignmentGuide) {
+                VStack() {
+                    Section(title: "Skills") {
                         ForEach(skills, id: \.name) { skill in
                             HStack {
                                 SkillView(skill: skill.name, level: skill.level)
                             }
                         }
-                        
-                        Text("Languages")
-                        
+                    }
+                    
+                    Section(title: "Languages") {
                         HStack {
                             SkillView(skill: "Romanian", level: 5)
                         }
@@ -64,7 +53,7 @@ struct CV: View {
                 }
             }
             .frame(height: pdfPageHeight)
-            .layoutPriority(27)
+            .layoutPriority(30)
             
             VStack(spacing: 30) {
                 Section(title: "Profile") {
@@ -111,18 +100,20 @@ struct CV: View {
                     Text(certificateMark)
                 }
             }
-            .padding(.leading, 5)
+            .padding(.leading, 7)
             .frame(height: pdfPageHeight)
-            .layoutPriority(73)
+            .layoutPriority(70)
+        }
+        .overlay(alignment: .bottomTrailing) {
+            SwiftUIWatermark()
         }
         .padding()
         .pdfPage()
+        .preferredColorScheme(.light)
     }
 }
 
-struct CV_Previews: PreviewProvider {
-    static var previews: some View {
-        CV()
-            .pdfPage()
-    }
+#Preview {
+    CV_Old()
+        .pdfPage()
 }

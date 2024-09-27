@@ -1,10 +1,3 @@
-//
-//  SkillView.swift
-//  Radu Petrisel iOS Developer
-//
-//  Created by Radu Petrisel on 29.08.2023.
-//
-
 import SwiftUI
 
 struct SkillView: View {
@@ -21,9 +14,6 @@ struct SkillView: View {
                     Image(systemName: index <= level ? "circle.fill" : "circle")
                         .font(.system(size: 9))
                 }
-            }
-            .alignmentGuide(.skillAlignmentGuide) { viewDimensions in
-                viewDimensions[.leading]
             }
         }
     }

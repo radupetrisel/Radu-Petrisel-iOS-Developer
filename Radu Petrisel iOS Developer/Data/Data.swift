@@ -1,14 +1,12 @@
-//
-//  Data.swift
-//  Radu Petrisel iOS Developer
-//
-//  Created by Radu Petrisel on 06.09.2023.
-//
-
 import Foundation
 
 let name = "RADU PETRIȘEL"
-let address = "3, Aleea Azuga Cluj-Napoca, 400451 Romania"
+let jobTitle = "Software Engineer"
+let address = """
+3, Aleea Azuga
+Cluj-Napoca, 400451
+Romania
+"""
 let phone = "+40747673818"
 let email = "radupetrisel@icloud.com"
 

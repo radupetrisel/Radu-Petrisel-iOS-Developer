@@ -1,16 +1,9 @@
-//
-//  ContentView.swift
-//  Radu Petrisel iOS Developer
-//
-//  Created by Radu Petrisel on 23.08.2023.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            CV()
+            CV_Old()
                 .toolbar {
                     ShareLink("Export PDF", item: render())
                         .toolbar(.visible, for: .windowToolbar)
@@ -22,7 +15,7 @@ struct ContentView: View {
     
     @MainActor
     func render() -> URL {
-        let renderer = ImageRenderer(content: CV())
+        let renderer = ImageRenderer(content: CV_Old())
         
         let url = URL.documentsDirectory.appending(component: "Radu Petrisel - iOS Developer.pdf")
         

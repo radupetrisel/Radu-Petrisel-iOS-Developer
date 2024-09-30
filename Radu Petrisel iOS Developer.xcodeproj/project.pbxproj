@@ -8,14 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		7C5F25832CA6E8F00052A7DA /* CurriculumVitae.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5F25822CA6E8F00052A7DA /* CurriculumVitae.swift */; };
-		7C79F7A62A9651530069F722 /* CV_Old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C79F7A52A9651530069F722 /* CV_Old.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7C5F25822CA6E8F00052A7DA /* CurriculumVitae.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurriculumVitae.swift; sourceTree = "<group>"; };
 		7C79F7932A964E850069F722 /* Radu Petrisel iOS Developer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Radu Petrisel iOS Developer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C79F79F2A964E870069F722 /* Radu_Petrisel_iOS_Developer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Radu_Petrisel_iOS_Developer.entitlements; sourceTree = "<group>"; };
-		7C79F7A52A9651530069F722 /* CV_Old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CV_Old.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -59,7 +57,6 @@
 				7C5F25882CA6EA6D0052A7DA /* App */,
 				7C5F25872CA6EA5F0052A7DA /* Extensions */,
 				7C5F25862CA6EA4A0052A7DA /* Subviews */,
-				7C79F7A52A9651530069F722 /* CV_Old.swift */,
 				7C5F25822CA6E8F00052A7DA /* CurriculumVitae.swift */,
 				7C79F79F2A964E870069F722 /* Radu_Petrisel_iOS_Developer.entitlements */,
 			);
@@ -141,7 +138,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C5F25832CA6E8F00052A7DA /* CurriculumVitae.swift in Sources */,
-				7C79F7A62A9651530069F722 /* CV_Old.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

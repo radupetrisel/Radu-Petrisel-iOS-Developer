@@ -48,8 +48,61 @@ struct CurriculumVitae: View {
 
                 Divider()
 
-                Text("Right side")
-                    .frame(width: proxy.size.width * rightToLeftRatio)
+                VStack(spacing: 20) {
+                    Section(title: "Profile") {
+                        Text(profile)
+                    }
+
+                    Section(title: "Employment history") {
+                        VStack(spacing: 7) {
+                            HStack(alignment: .top) {
+                                HStack {
+                                    Image(systemName: "person.text.rectangle")
+
+                                    Text(jobRole)
+                                        .bold()
+
+                                    Spacer()
+
+                                    Image(systemName: "building")
+
+                                    Text(jobCompany)
+                                        .italic()
+                                }
+
+                                Spacer()
+                            }
+
+                            Text(jobDescription)
+                        }
+                    }
+
+                    Section(title: "Education") {
+                        HStack(alignment: .top) {
+                            VStack(alignment: .leading, spacing: 5) {
+                                HStack {
+                                    Image(systemName: "graduationcap")
+
+                                    Text(educationLevel)
+                                        .bold()
+
+                                    Spacer()
+
+                                    Image(systemName: "building")
+
+                                    Text(educationInstitution)
+                                        .italic()
+                                }
+                            }
+                        }
+                    }
+
+                    Section(title: "Certifications") {
+                        Text(certificate)
+
+                        Text(certificateMark)
+                    }
+                }
             }
         }
         .overlay(alignment: .bottomTrailing, content: SwiftUIWatermark.init)

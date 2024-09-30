@@ -62,11 +62,11 @@ struct CV_Old: View {
                 
                 Section(title: "EMPLOYMENT HISTORY") {
                     HStack {
-                        Text(job)
-                        
+                        Text(jobRole)
+
                         Spacer()
                         
-                        Text(location)
+                        Text(jobLocation)
                     }
                     
                     Text(jobDescription)
@@ -78,7 +78,7 @@ struct CV_Old: View {
                         
                         Spacer()
                         
-                        Text(location)
+                        Text(jobLocation)
                     }
                     
                     Text(internshipDescription)
@@ -86,11 +86,11 @@ struct CV_Old: View {
                 
                 Section(title: "EDUCATION") {
                     HStack {
-                        Text(education)
+                        Text(educationLevel)
                         
                         Spacer()
                         
-                        Text(location)
+                        Text(jobLocation)
                     }
                 }
                 

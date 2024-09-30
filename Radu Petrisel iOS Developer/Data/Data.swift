@@ -26,8 +26,9 @@ let hobbies = ["Gaming", "Travelling", "Swimming"]
 let profile = "Passionate software engineer always looking to improve myself. I'm always trying to keep up with latest software and technologies and enjoy taking heads-on the challenges that come with them."
 
 
-let job = ".NET Developer, Broadridge Financial Solutions"
-let location = "Cluj-Napoca"
+let jobRole = ".NET Developer"
+let jobCompany = "Broadridge Financial Solutions"
+let jobLocation = "Cluj-Napoca"
 let jobDescription = """
 • Implemented various client-side features on high-touch and low-touch trading systems
 • Helped implement server-side features on high-touch trading systems
@@ -40,7 +41,8 @@ let internshipDescription = """
 • Enhanced developer experience on internal platforms (Git, Jenkins)
 """
 
-let education = "Bachelor, Technical University of Cluj-Napoca"
+let educationLevel = "Bachelor"
+let educationInstitution = "Technical University of Cluj-Napoca"
 
 let certificate = "Cambridge English Level 3 Certificate in ESOL International (Advanced), Cambridge English Language Assessment"
 let certificateMark = "Grade C"

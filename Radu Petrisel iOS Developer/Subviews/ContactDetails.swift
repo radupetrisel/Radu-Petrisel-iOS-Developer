@@ -5,6 +5,7 @@ struct ContactDetails: View {
         Section(title: "Contact details") {
             VStack(alignment: .leading, spacing: 5) {
                 Label(address, systemImage: "location")
+                    .fixedSize(horizontal: false, vertical: true)
 
                 Label(phone, systemImage: "phone")
 

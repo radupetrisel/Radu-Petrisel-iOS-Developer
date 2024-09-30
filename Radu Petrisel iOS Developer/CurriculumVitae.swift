@@ -48,13 +48,13 @@ struct CurriculumVitae: View {
 
                 Divider()
 
-                VStack(spacing: 20) {
-                    Section(title: "Profile") {
+                VStack(spacing: 15) {
+                    Section(title: "About me") {
                         Text(profile)
                     }
 
                     Section(title: "Employment history") {
-                        VStack(spacing: 7) {
+                        VStack(alignment: .leading, spacing: 7) {
                             HStack(alignment: .top) {
                                 HStack {
                                     Image(systemName: "person.text.rectangle")
@@ -73,34 +73,46 @@ struct CurriculumVitae: View {
                                 Spacer()
                             }
 
-                            Text(jobDescription)
+                            ForEach(jobDescription, id: \.self) {
+                                Text("• \($0)")
+                            }
                         }
                     }
 
                     Section(title: "Education") {
-                        HStack(alignment: .top) {
-                            VStack(alignment: .leading, spacing: 5) {
-                                HStack {
-                                    Image(systemName: "graduationcap")
+                        VStack(alignment: .leading, spacing: 7) {
+                            HStack(alignment: .top) {
+                                VStack(alignment: .leading, spacing: 5) {
+                                    HStack {
+                                        Image(systemName: "graduationcap")
 
-                                    Text(educationLevel)
-                                        .bold()
+                                        Text(educationLevel)
+                                            .bold()
 
-                                    Spacer()
+                                        Spacer()
 
-                                    Image(systemName: "building")
+                                        Image(systemName: "building")
 
-                                    Text(educationInstitution)
-                                        .italic()
+                                        Text(educationInstitution)
+                                            .italic()
+                                    }
                                 }
+                            }
+
+                            ForEach(educationDescription, id: \.self) {
+                                Text("• \($0)")
                             }
                         }
                     }
 
                     Section(title: "Certifications") {
-                        Text(certificate)
+                        VStack(alignment: .leading) {
+                            Text(certificate)
 
-                        Text(certificateMark)
+                            //TODO: find year of certification
+
+                            Text(certificateMark)
+                        }
                     }
                 }
             }

@@ -23,28 +23,26 @@ let skills = [
 
 let hobbies = ["Gaming", "Travelling", "Swimming"]
 
-let profile = "Passionate software engineer always looking to improve myself. I'm always trying to keep up with latest software and technologies and enjoy taking heads-on the challenges that come with them."
+let profile = "Driven software engineer with a passion for growth and innovation, constantly striving to expand my expertise by staying on the cutting edge of technology. Eager to tackle complex challenges head-on, I thrive in dynamic environments that foster creativity, learning, and pushing boundaries to deliver impactful solutions."
 
 
 let jobRole = ".NET Developer"
 let jobCompany = "Broadridge Financial Solutions"
 let jobLocation = "Cluj-Napoca"
-let jobDescription = """
-• Implemented various client-side features on high-touch and low-touch trading systems
-• Helped implement server-side features on high-touch trading systems
-• Contributed to open-source projects
-"""
-
-let internship = "DevOps Intern, Broadridge Financial Solutions"
-let internshipDescription = """
-• Maintained CI/CD pipelines
-• Enhanced developer experience on internal platforms (Git, Jenkins)
-"""
+let jobDescription = [
+"Developed and implemented innovative client-side features for both high-touch and low-touch trading systems,significantly enhancing user interaction and efficiency.",
+"Collaborated on implementing server-side features for high-touch trading platforms, improving system reliability and performance",
+"Contributed to open-source projects, showcasing a commitment to community-driven development and software innovation"
+]
 
 let educationLevel = "Bachelor"
 let educationInstitution = "Technical University of Cluj-Napoca"
+let educationDescription = [
+"Completed coursework in Advanced Data Structures and Algorithms, Database Management Systems, Software Engineering, Operating Systems, and Computer Networks, gaining a comprehensive foundation in core computer science concepts and practical application.",
+#"My thesis project, titled "FluentMotion", involved the development of a .NET and ReactiveX-based library for processing hand tracking data in Virtual Reality (VR), enabling more simpler and more powerful user experiences within VR environments."#
+]
 
-let certificate = "Cambridge English Level 3 Certificate in ESOL International (Advanced), Cambridge English Language Assessment"
+let certificate = "Cambridge English: Advanced (CAE) Certification"
 let certificateMark = "Grade C"
 
 struct Skill {

@@ -20,28 +20,11 @@ struct CurriculumVitae: View {
                     VStack(alignment: .leading, spacing: 20) {
                         ContactDetails()
 
-                        Section(title: "Skills") {
-                            ForEach(skills, id: \.name) { skill in
-                                HStack {
-                                    SkillView(skill: skill.name, level: skill.level)
-                                }
-                            }
-                        }
+                        SkillsView()
 
-                        Section(title: "Languages") {
-                            HStack {
-                                SkillView(skill: "Romanian", level: 5)
-                            }
+                        LanguageView()
 
-                            HStack {
-                                SkillView(skill: "English", level: 5)
-                            }
-                        }
-
-                        Section(title: "Hobbies") {
-                            Text(hobbies.formatted(.list(type: .and)))
-                                .fixedSize(horizontal: false, vertical: true)
-                        }
+                        HobbiesView()
                     }
                 }
                 .frame(width: proxy.size.width * leftToRightRatio)
@@ -49,103 +32,15 @@ struct CurriculumVitae: View {
                 Divider()
 
                 VStack(spacing: 15) {
-                    Section(title: "About me") {
-                        Text(profile)
-                    }
+                    AboutMeView()
 
-                    Section(title: "Employment history") {
-                        VStack(alignment: .leading, spacing: 7) {
-                            HStack(alignment: .top) {
-                                HStack {
-                                    Image(systemName: "person.text.rectangle")
+                    EmploymentView()
 
-                                    Text(jobRole)
-                                        .bold()
+                    IOSDeveloperView()
 
-                                    Spacer()
+                    EducationView()
 
-                                    Image(systemName: "building")
-
-                                    Text(jobCompany)
-                                        .italic()
-                                }
-
-                                Spacer()
-                            }
-
-                            ForEach(jobDescription, id: \.self) {
-                                Text("• \($0)")
-                            }
-                        }
-                    }
-
-                    Section(title: "iOS Experience") {
-                        VStack(alignment: .leading, spacing: 7) {
-                            HStack(alignment: .top) {
-                                HStack {
-                                    Image(systemName: "person.text.rectangle")
-
-                                    Text(iosRole)
-                                        .bold()
-
-                                    Spacer()
-
-                                    Image(systemName: "building")
-
-                                    Text(iosCompany)
-                                        .italic()
-                                }
-
-                                Spacer()
-                            }
-
-                            ForEach(iosDescription, id: \.self) {
-                                Text("• \($0)")
-                            }
-                        }
-                    }
-
-                    Section(title: "Education") {
-                        VStack(alignment: .leading, spacing: 7) {
-                            HStack(alignment: .top) {
-                                VStack(alignment: .leading, spacing: 5) {
-                                    HStack {
-                                        Image(systemName: "graduationcap")
-
-                                        Text(educationLevel)
-                                            .bold()
-
-                                        Spacer()
-
-                                        Image(systemName: "building")
-
-                                        Text(educationInstitution)
-                                            .italic()
-                                    }
-                                }
-                            }
-
-                            ForEach(educationDescription, id: \.self) {
-                                Text("• \($0)")
-                            }
-                        }
-                    }
-
-                    Section(title: "Certifications") {
-                        VStack(alignment: .leading) {
-                            HStack {
-                                Text(certificate)
-
-                                Spacer()
-
-
-                                Text(certificationDate)
-                                    .italic()
-                            }
-
-                            Text(certificateMark)
-                        }
-                    }
+                    CertificationView()
                 }
             }
         }
@@ -159,5 +54,3 @@ struct CurriculumVitae: View {
 #Preview {
     CurriculumVitae()
 }
-
-

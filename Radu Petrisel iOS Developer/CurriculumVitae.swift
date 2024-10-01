@@ -79,6 +79,32 @@ struct CurriculumVitae: View {
                         }
                     }
 
+                    Section(title: "iOS Experience") {
+                        VStack(alignment: .leading, spacing: 7) {
+                            HStack(alignment: .top) {
+                                HStack {
+                                    Image(systemName: "person.text.rectangle")
+
+                                    Text(iosRole)
+                                        .bold()
+
+                                    Spacer()
+
+                                    Image(systemName: "building")
+
+                                    Text(iosCompany)
+                                        .italic()
+                                }
+
+                                Spacer()
+                            }
+
+                            ForEach(iosDescription, id: \.self) {
+                                Text("• \($0)")
+                            }
+                        }
+                    }
+
                     Section(title: "Education") {
                         VStack(alignment: .leading, spacing: 7) {
                             HStack(alignment: .top) {
@@ -107,9 +133,15 @@ struct CurriculumVitae: View {
 
                     Section(title: "Certifications") {
                         VStack(alignment: .leading) {
-                            Text(certificate)
+                            HStack {
+                                Text(certificate)
 
-                            //TODO: find year of certification
+                                Spacer()
+
+
+                                Text(certificationDate)
+                                    .italic()
+                            }
 
                             Text(certificateMark)
                         }

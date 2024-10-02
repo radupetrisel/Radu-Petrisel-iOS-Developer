@@ -16,7 +16,7 @@ struct ContentView: View {
     func render() -> URL {
         let renderer = ImageRenderer(content: CurriculumVitae())
 
-        let url = URL.documentsDirectory.appending(component: "Radu Petrisel - iOS Developer.pdf")
+        let url = URL.documentsDirectory.appending(component: "Radu Petrisel - Software Engineer.pdf")
         
         renderer.render { size, contextAction in
             var box = CGRect(x: 0, y: 0, width: pdfPageWidth, height: pdfPageHeight)

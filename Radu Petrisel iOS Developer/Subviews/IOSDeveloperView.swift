@@ -2,15 +2,15 @@ import SwiftUI
 
 struct IOSDeveloperView: View {
     var body: some View {
-        Section(title: "iOS Experience") {
+        Section(title: "iOS Developer", titleDetails: iosTimeInterval) {
             VStack(alignment: .leading, spacing: 7) {
                 HStack(alignment: .top) {
                     HStack {
-                        Image(systemName: "person.text.rectangle")
+                        Image(systemName: "hammer")
                         
-                        Text(iosRole)
+                        Text("Swift SwiftUI SwiftData Git")
                             .bold()
-                        
+
                         Spacer()
                         
                         Image(systemName: "building")

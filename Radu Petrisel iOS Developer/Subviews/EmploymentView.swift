@@ -2,13 +2,13 @@ import SwiftUI
 
 struct EmploymentView: View {
     var body: some View {
-        Section(title: "Employment history") {
+        Section(title: ".NET Developer", titleDetails: jobTimeInterval) {
             VStack(alignment: .leading, spacing: 7) {
                 HStack(alignment: .top) {
                     HStack {
-                        Image(systemName: "person.text.rectangle")
-                        
-                        Text(jobRole)
+                        Image(systemName: "hammer")
+
+                        Text(".NET WPF Winforms Git")
                             .bold()
                         
                         Spacer()

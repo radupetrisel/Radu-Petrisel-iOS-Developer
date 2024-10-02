@@ -18,31 +18,36 @@ let profile = "Driven software engineer with a passion for growth and innovation
 
 let jobRole = ".NET Developer"
 let jobCompany = "Broadridge Financial Solutions"
+let jobTimeInterval = "Dec 2018 - Present"
 let jobLocation = "Cluj-Napoca"
 let jobDescription = [
-"Developed and implemented innovative client-side features for both high-touch and low-touch trading systems,significantly enhancing user interaction and efficiency",
-"Collaborated on implementing server-side features for high-touch trading platforms, improving system reliability and performance",
-"Contributed to open-source projects, showcasing a commitment to community-driven development and software innovation"
+    "Developed and implemented innovative client-side features for both high-touch and low-touch trading systems, significantly enhancing user interaction and efficiency",
+    "Designed and implemented a variety of WPF-based front-end elements, enhancing the overall user experience and functionality of the application",
+    "Collaborated on implementing server-side features for high-touch trading platforms, improving system reliability and performance",
 ]
-let jobStart = "Dec 2015"
 
 let iosRole = "iOS Developer"
 let iosCompany = "Self employed"
+let iosTimeInterval = "Sep 2022 - Present"
 let iosLocation = "Cluj-Napoca"
 let iosDescription = [
     "Designed, developed, and successfully published an innovative cooking application for iOS, providing an engaging and user-friendly experience for culinary enthusiasts",
     "Gained extensive hands-on experience in iOS development, utilizing frameworks such as SwiftUI, SwiftData, and SwiftTesting",
     "Managed the complete lifecycle of publishing an iOS app to the App Store, including design, development, testing, submission, and review"
 ]
-let iosStart = "Sep 2022"
 
-let educationLevel = "Bachelor"
+let educationLevel = "Bachelor's Degree"
+let educationTimeInterval = "2015 - 2019"
 let educationInstitution = "Technical University of Cluj-Napoca"
 let educationDescription = [
-"Completed coursework in Advanced Data Structures and Algorithms, Database Management Systems, Software Engineering, Operating Systems, and Computer Networks, gaining a comprehensive foundation in core computer science concepts and practical application.",
-#"My thesis project, titled "FluentMotion", involved the development of a .NET and ReactiveX-based library for processing hand tracking data in Virtual Reality (VR), enabling more simpler and more powerful user experiences within VR environments."#
+    "Completed coursework in Advanced Data Structures and Algorithms, Database Management Systems, Software Engineering, Operating Systems, and Computer Networks, gaining a comprehensive foundation in core computer science concepts and practical applications",
+    #"My thesis project, titled "FluentMotion", involved the development of a .NET and ReactiveX-based library for processing hand tracking data in Virtual Reality (VR), enabling simpler and more powerful user experiences within VR environments"#
 ]
 
-let certificate = "Cambridge English: Advanced (CAE)"
-let certificateMark = "Grade C"
-let certificationDate = "Nov 2013"
+let caeCertificate = "Cambridge English: Advanced (CAE)"
+let caeCertificateMark = "Grade C"
+let caeCertificationDate = "Nov 2013"
+
+let wsetCertificate = "Wine & Spirits Education Trust (WSET)"
+let wsetCertificateMark = "Level 2"
+let wsetCertificationDate = "Jun 2024"

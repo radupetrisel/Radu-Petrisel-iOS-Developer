@@ -2,7 +2,7 @@ import SwiftUI
 
 struct EducationView: View {
     var body: some View {
-        Section(title: "Education") {
+        Section(title: "Education", titleDetails: educationTimeInterval) {
             VStack(alignment: .leading, spacing: 7) {
                 HStack(alignment: .top) {
                     VStack(alignment: .leading, spacing: 5) {

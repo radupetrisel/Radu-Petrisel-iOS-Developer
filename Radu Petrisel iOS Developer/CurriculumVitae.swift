@@ -1,17 +1,10 @@
-//
-//  CurriculumVitae.swift
-//  Radu Petrisel iOS Developer
-//
-//  Created by Radu Petrisel on 27.09.2024.
-//
-
 import SwiftUI
 
 struct CurriculumVitae: View {
     private let headerRatio = 0.15
 
     var body: some View {
-        VStack {
+        VStack(spacing: 15) {
             HStack(alignment: .firstTextBaseline, spacing: 10) {
                 VStack(alignment: .leading) {
                     ProfileImage()
@@ -26,9 +19,7 @@ struct CurriculumVitae: View {
                 }
             }
 
-            Divider()
-
-            VStack(spacing: 10) {
+            VStack(spacing: 12) {
                 EmploymentView()
 
                 IOSDeveloperView()
@@ -41,7 +32,7 @@ struct CurriculumVitae: View {
             Spacer()
         }
         .overlay(alignment: .bottomTrailing, content: SwiftUIWatermark.init)
-        .padding(.horizontal)
+        .padding()
         .pdfPage()
         .preferredColorScheme(.light)
     }

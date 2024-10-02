@@ -5,16 +5,30 @@ struct CertificationView: View {
         Section(title: "Certifications") {
             VStack(alignment: .leading) {
                 HStack {
-                    Text(certificate)
-                    
+                    Text(caeCertificate)
+                        .bold()
+
+                    Text(caeCertificateMark)
+                        .italic()
+
                     Spacer()
                     
-                    
-                    Text(certificationDate)
+                    Text(caeCertificationDate)
                         .italic()
                 }
-                
-                Text(certificateMark)
+
+                HStack {
+                    Text(wsetCertificate)
+                        .bold()
+
+                    Text(wsetCertificateMark)
+                        .italic()
+
+                    Spacer()
+
+                    Text(wsetCertificationDate)
+                        .italic()
+                }
             }
         }
     }

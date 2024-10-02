@@ -2,13 +2,13 @@ import SwiftUI
 
 struct SkillsView: View {
     var body: some View {
-        HStack {
+        HStack(alignment: .firstTextBaseline) {
             Text("Skillset")
-                .bold()
 
             HStack(spacing: 10) {
                 ForEach(skills, id: \.self, content: Text.init)
-                    .italic()
+                    .font(.title3)
+                    .bold()
             }
         }
     }

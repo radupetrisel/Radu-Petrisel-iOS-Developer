@@ -10,7 +10,7 @@ let email = "radupetrisel@icloud.com"
 let linkedIn = "linkedin.com/in/radu-petrisel"
 let github = "github.com/radupetrisel"
 
-let skills = ["Swift", "SwiftUI", ".NET", "WPF", "Git"]
+let skills = ["WPF", ".NET", "Swift", "SwiftUI", "Git"]
 
 let hobbies = ["Gaming", "Travelling", "Swimming"]
 

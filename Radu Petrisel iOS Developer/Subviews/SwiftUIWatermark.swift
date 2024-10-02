@@ -9,8 +9,6 @@ struct SwiftUIWatermark: View {
                 .offset(y: -1)
         }
         .font(.system(size: 8))
-        .padding(.bottom, 7)
-        .padding(.trailing, 5)
     }
 }
 

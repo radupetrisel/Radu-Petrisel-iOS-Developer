@@ -2,7 +2,7 @@ import SwiftUI
 
 struct LanguageView: View {
     var body: some View {
-        Section(title: "Languages") {
+        VStack {
             HStack {
                 SkillView(skill: "Romanian", level: 5)
             }

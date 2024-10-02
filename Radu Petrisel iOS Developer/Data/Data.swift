@@ -1,25 +1,16 @@
 import Foundation
 
-let name = "RADU PETRIȘEL"
-let jobTitle = "Software Engineer"
-let address = """
-3, Aleea Azuga
-Cluj-Napoca, 400451
-Romania
+let name = """
+RADU
+PETRIȘEL
 """
+let jobTitle = "Software Engineer"
 let phone = "+40747673818"
 let email = "radupetrisel@icloud.com"
+let linkedIn = "linkedin.com/in/radu-petrisel"
+let github = "github.com/radupetrisel"
 
-let linkedIn = "https://www.linkedin.com/in/radu-petrisel"
-let github = "https://github.com/radupetrisel"
-
-let skills = [
-    Skill(name: "Swift", level: 4),
-    Skill(name: "SwiftUI", level: 4),
-    Skill(name: "UIKit", level: 3),
-    Skill(name: "C#", level: 5),
-    Skill(name: "Git", level: 5),
-]
+let skills = ["Swift", "SwiftUI", ".NET", "WPF", "Git"]
 
 let hobbies = ["Gaming", "Travelling", "Swimming"]
 
@@ -55,8 +46,3 @@ let educationDescription = [
 let certificate = "Cambridge English: Advanced (CAE)"
 let certificateMark = "Grade C"
 let certificationDate = "Nov 2013"
-
-struct Skill {
-    let name: String
-    let level: Int
-}

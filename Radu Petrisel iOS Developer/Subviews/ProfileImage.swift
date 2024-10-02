@@ -9,12 +9,12 @@ struct ProfileImage: View {
                 .resizable()
                 .scaledToFit()
                 .offset(y: 7)
-                .frame(width: 65)
-                .clipShape(Circle())
+                .clipShape(.circle)
+                .frame(height: 80)
 
             VStack(alignment: .leading) {
                 Text(name)
-                    .font(.system(size: 20))
+                    .font(.title2)
                     .fontWeight(.bold)
                     .offset(x: -1)
 

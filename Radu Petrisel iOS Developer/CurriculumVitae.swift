@@ -8,44 +8,40 @@
 import SwiftUI
 
 struct CurriculumVitae: View {
-    private let leftToRightRatio = 0.33
-    private var rightToLeftRatio: Double { 1 - leftToRightRatio }
+    private let headerRatio = 0.15
 
     var body: some View {
-        GeometryReader { proxy in
-            HStack(alignment: .top) {
-                VStack(alignment: .leading, spacing: 0) {
+        VStack {
+            HStack(alignment: .firstTextBaseline, spacing: 10) {
+                VStack(alignment: .leading) {
                     ProfileImage()
 
-                    VStack(alignment: .leading, spacing: 20) {
-                        ContactDetails()
-
-                        SkillsView()
-
-                        LanguageView()
-
-                        HobbiesView()
-                    }
+                    ContactDetails()
                 }
-                .frame(width: proxy.size.width * leftToRightRatio)
 
-                Divider()
-
-                VStack(spacing: 15) {
+                VStack(alignment: .leading, spacing: 10) {
                     AboutMeView()
 
-                    EmploymentView()
-
-                    IOSDeveloperView()
-
-                    EducationView()
-
-                    CertificationView()
+                    SkillsView()
                 }
             }
+
+            Divider()
+
+            VStack(spacing: 10) {
+                EmploymentView()
+
+                IOSDeveloperView()
+
+                EducationView()
+
+                CertificationView()
+            }
+
+            Spacer()
         }
         .overlay(alignment: .bottomTrailing, content: SwiftUIWatermark.init)
-        .padding()
+        .padding(.horizontal)
         .pdfPage()
         .preferredColorScheme(.light)
     }
